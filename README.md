@@ -21,15 +21,15 @@
     </tr>
     <tr>
       <td align="center">
-          <img alt="Image" src="https://github.com/user-attachments/assets/75273a9a-97a6-49f5-99e0-131257220e90" width="200px;" alt="박유진"/>
+          <img alt="Image" src="https://github.com/user-attachments/assets/1d433d60-8af5-4619-82a6-01d176bc2b00" width="200px;" alt="박유진"/>
       <td align="center">
-          <img alt="Image" src="https://github.com/user-attachments/assets/92ca8e44-2951-44e9-b1ec-8bb5fe2aa4b8" width="200px;" alt="서예찬"/>
+          <img alt="Image" src="https://github.com/user-attachments/assets/a56c575d-c9e4-4c86-b7d5-4d8d9bd98127" width="200px;" alt="서예찬"/>
       </td>
       <td align="center">
-        <img alt="Image" src="https://github.com/user-attachments/assets/a074e232-3f3b-413b-9a5a-3f70c48d8a1d" width="200px;"alt="조이현" />
+        <img alt="Image" src="https://github.com/user-attachments/assets/60cacd87-c100-4e8e-ba64-cd68acc4aa97" width="200px;"alt="조이현" />
       </td>
       <td align="center">
-        <img alt="Image" src="https://github.com/user-attachments/assets/525e7e82-e010-4a24-8baa-796f22900a63" width="200px;" alt="허정윤"/>
+        <img alt="Image" src="https://github.com/user-attachments/assets/fe203939-74eb-41e5-be0b-c41f53477ee8" width="200px;" alt="허정윤"/>
       </td>
     </tr>
     <tr>
