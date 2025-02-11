@@ -1,6 +1,6 @@
 # SKN09-2nd-4Team
 
-# 0. Introduction Team (팀 소개)
+# 0. Team Introduction (팀 소개)
 
 ### 👑팀명 :MVP("Million Vault Protector" ) 
 
@@ -41,7 +41,7 @@
   </tbody>
 </table>
 
-# 1. Introduction Project (프로젝트 개요)
+# 1. Project Introduction (프로젝트 개요)
 
 ### 프로젝트 명
 
@@ -74,8 +74,15 @@
 
 # 4. 데이터 전처리 결과서 (EDA)
 # 5. 인공지능 학습 결과서
+- 왜 머신러닝인가
+- 왜 해당 모델인가
+- 학습된 인공지능 모델
 # 6. 수행결과(테스트 결과 화면 또는 시연 페이지)
 # 7. 한 줄 회고
+- 박유진:
+- 서예찬:
+- 조이현:
+- 허정윤: 
 
 ## README.md 작성 내용
 
