@@ -34,8 +34,8 @@
     </tr>
     <tr>
       <td><a href="https://github.com/YUJINDL01"><div align=center>@YUJINDL01</div></a></td>
-      <td><a href="https://github.com/SIQRIT"><div align=center>@SIQRIT</div></a></td>
       <td><a href="https://github.com/syc9811"><div align=center>@syc9811</div></a></td>
+      <td><a href="https://github.com/SIQRIT"><div align=center>@SIQRIT</div></a></td>
       <td><a href="https://github.com/devunis"><div align=center>@devunis</div></a></td>
     </tr>
   </tbody>
