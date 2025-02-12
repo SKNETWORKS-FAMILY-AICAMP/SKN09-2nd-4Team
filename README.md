@@ -101,9 +101,6 @@
 
 ----
 
-## WBS
-![image](https://github.com/user-attachments/assets/525b4740-d79b-436c-8ee0-d8fad31a2f46)
-
 
 # 3. WBS
 
