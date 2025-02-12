@@ -2,7 +2,7 @@
 # streamlit run jy/page.py
 import os
 import streamlit as st
-from catboost import CatBoostClassifier
+from joblib import load
 
 # 현재 파일의 경로
 file_path = os.path.abspath(__file__)
@@ -11,9 +11,9 @@ path = os.path.dirname(file_path)
 
 def main():
     st.title("고객 이탈 예측")
-    st.write('CatBoost 모델을 사용한 고객 이탈 예측입니다.')
-    cat = CatBoostClassifier()
-    cat.load_model(f'{path}/model/catboost_model.cbm')
+    st.write('앙상블(스태킹) 모델을 사용한 고객 이탈 예측입니다.')
+    load_path = os.path.join(path, './model/stacking.joblib')
+    model = load(load_path)
     # ['credit_score', 'age', 'tenure', 'balance', 'products_number', 'credit_card', 'active_member', 'estimated_salary', 'country']
     # 위 데이터들을 입력 받기
 
@@ -27,7 +27,7 @@ def main():
         age = ages.index(st.selectbox('나이', ages))
         age = [29, 50, 70, 90][age]
         # credit_score = st.number_input('신용점수', min_value=300, max_value=850)
-        credit_score = st.slider('신용점수', min_value=300, max_value=850, value=500)ㅈ
+        credit_score = st.slider('신용점수', min_value=300, max_value=850, value=500)
         # estimated_salary = st.number_input('추정 급여', min_value=0)
 
 
@@ -47,7 +47,7 @@ def main():
             '추정 급여', min_value=0, max_value=200000, value=100000)
         credit_card = st.checkbox('신용카드 여부')
     input_data = [[credit_score, age, tenure, balance, products_number,
-                    credit_card, active_member, estimated_salary, 0]]
+                    credit_card, active_member, estimated_salary]]
     
     # session_state 초기화
     if "pred_proba" not in st.session_state:
@@ -57,7 +57,7 @@ def main():
         st.header(' ')
         # 버튼 클릭 시 새로운 예측 실행
         if st.button('확인'):
-            st.session_state.pred_proba = [cat.predict_proba(
+            st.session_state.pred_proba = [model.predict_proba(
                 input_data)[0][1]] + st.session_state.pred_proba
 
     # 예측 결과 표시
