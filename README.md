@@ -1,15 +1,15 @@
 # SKN09-2nd-4Team
 
-# 0. Introduction Team (팀 소개)
+# 0. Team Introduction (팀 소개)
 
-### 👑팀명 :MVP("Million Vault Protector" ) 
+### 👑팀명: MVP ("Million Vault Protector") 
 
 
 ![Image](https://github.com/user-attachments/assets/92e589e1-f3ea-447d-94a4-3aeb6625956a)
 
 
 
-- 프로젝트 기간: 2025.02.03 ~ 02.14
+- 프로젝트 기간: 2025.02.13 ~ 02.14
 <table align=center>
   <tbody>
     <tr>
@@ -41,7 +41,7 @@
   </tbody>
 </table>
 
-# 1. Introduction Project (프로젝트 개요)
+# 1. Project Introduction (프로젝트 개요)
 
 ### 프로젝트 명
 
@@ -53,7 +53,7 @@
 
 #### 데이터 및 접근 방법
 - 데이터 수집: 고객의 거래 내역, 계좌 유형, 대출 이력, 고객 서비스 이용 패턴 등의 데이터를 분석
-- 데이터 전처리: 결측치 처리, 이상치 제거, 데이터 정규화 등의 과정을 수행
+- 데이터 전처리 및 시각화: 결측치 처리, 이상치 제거, 데이터 정규화 등의 과정을 수행
 - 특성 엔지니어링: 고객 연령, 소득 수준, 신용 점수, 계좌 잔액 변화, 대출 상환 이력 등의 중요한 특성 추출
 - 모델 개발: 로지스틱 회귀, 랜덤 포레스트, XGBoost, 신경망 등 다양한 머신러닝 알고리즘을 적용하여 예측 성능 비교
 - 모델 평가: 정확도, 정밀도, 재현율, F1-score 및 ROC-AUC 등의 성능 지표를 활용한 모델 평가
@@ -70,12 +70,51 @@
 
 # 2. 기술 스택
 
+###  협업 및 문서화  
+![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white)   
+
+###  도구  
+![VSCode](https://img.shields.io/badge/VScode-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white)
+
+###  형상 관리
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white) 
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)  
+
+###  프로그래밍 언어  
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white)  
+
+###  데이터 분석  
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=Pandas&logoColor=white) 
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=NumPy&logoColor=white)  
+
+###  머신러닝  
+![Scikit-Learn](https://img.shields.io/badge/Scikit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)  
+
+###  데이터 시각화  
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=Matplotlib&logoColor=white) 
+![Seaborn](https://img.shields.io/badge/Seaborn-4C8CBF?style=for-the-badge&logo=Seaborn&logoColor=white)  
+
+### 🔗 대시보드  
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)  
+
+<br>
+
+----
+
+
 # 3. WBS
 
 # 4. 데이터 전처리 결과서 (EDA)
 # 5. 인공지능 학습 결과서
+- 왜 머신러닝인가
+- 왜 해당 모델인가
+- 학습된 인공지능 모델
 # 6. 수행결과(테스트 결과 화면 또는 시연 페이지)
 # 7. 한 줄 회고
+- 박유진:
+- 서예찬:
+- 조이현:
+- 허정윤: 
 
 ## README.md 작성 내용
 
