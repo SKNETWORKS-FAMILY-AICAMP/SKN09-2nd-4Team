@@ -20,14 +20,16 @@ def main():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        # credit_score = st.number_input('신용점수', min_value=300, max_value=850)
-        credit_score = st.slider(
-            '신용점수', min_value=300, max_value=850, value=500)
         # age = st.number_input('나이', min_value=18, max_value=100)
         # age = st.selectbox('나이', range(10, 80, 10))
-        age = st.slider('나이', min_value=18, max_value=100, value=30)
+        # age = st.slider('나이', min_value=18, max_value=100, value=30)
+        ages = ['청년', '중년', '장년', '노년']
+        age = ages.index(st.selectbox('나이', ages))
+        age = [29, 50, 70, 90][age]
+        # credit_score = st.number_input('신용점수', min_value=300, max_value=850)
+        credit_score = st.slider('신용점수', min_value=300, max_value=850, value=500)ㅈ
         # estimated_salary = st.number_input('추정 급여', min_value=0)
-        credit_card = st.checkbox('신용카드 여부')
+
 
     with col2:
         # balance = st.number_input('잔액', min_value=0)
@@ -43,10 +45,10 @@ def main():
         tenure = st.slider('가입기간', min_value=0, max_value=20, value=10)
         estimated_salary = st.slider(
             '추정 급여', min_value=0, max_value=200000, value=100000)
-        input_data = [[credit_score, age, tenure, balance, products_number,
+        credit_card = st.checkbox('신용카드 여부')
+    input_data = [[credit_score, age, tenure, balance, products_number,
                     credit_card, active_member, estimated_salary, 0]]
-    # st.write(input_data)
-
+    
     # session_state 초기화
     if "pred_proba" not in st.session_state:
         st.session_state.pred_proba = []
@@ -63,7 +65,6 @@ def main():
         st.write('고객 이탈 확률은 다음과 같습니다.')
         for i, pred in enumerate(st.session_state.pred_proba):
             st.write(f"예측 결과: {pred:.5f}")
-
 
 if __name__ == '__main__':
     main()
