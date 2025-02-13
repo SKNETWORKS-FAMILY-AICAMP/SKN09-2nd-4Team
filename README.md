@@ -68,7 +68,6 @@
 
 - 하지만 Sage Journal-Reducing Adverse Selection through Customer Relationship Management
 Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이탈이 발생한 후에 대응하는 사후 관리 방식에 의존하고 있어 실질적인 비용 절감과 고객 유지 효과를 극대화하는 데 어려움을 겪고 있습니다. 이에 따라, 사전적으로 고객 이탈을 예측하고 선제적으로 대응할 수 있는 데이터 기반의 고객 이탈 예측 모델이 필요하게 되었습니다.
-<br>
 
 ### 분석 및 접근 방법
 - 데이터 수집: 고객의 거래 내역, 계좌 유형, 대출 이력, 고객 서비스 이용 패턴 등 ABC 은행의 데이터셋을 활용.
