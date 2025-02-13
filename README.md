@@ -184,6 +184,30 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 >
 >
 >![Image](https://github.com/user-attachments/assets/9851172e-cd92-4835-8348-d3cfb9478a32)
+>
+>
+>![Image](https://github.com/user-attachments/assets/28f5a9f3-7c29-40ff-ad42-420e85616bb5)
+>
+>
+>![Image](https://github.com/user-attachments/assets/3283f5f1-5ec9-4a4c-9ee9-16f357b34892)
+>
+>
+>![Image](https://github.com/user-attachments/assets/4f2aa2ed-57e5-46e4-ba7e-4359016b394a)
+>
+>
+>![Image](https://github.com/user-attachments/assets/046ad368-bdde-41d3-8bc8-7d1c4345f9e1)
+>
+>
+>![Image](https://github.com/user-attachments/assets/baceee0e-0bf1-4d1d-a90f-ff20d8b4c6b5)
+>
+>
+>![Image](https://github.com/user-attachments/assets/4f8e096c-5d26-4f80-9b85-ec48bebf6801)
+>
+>
+>![Image](https://github.com/user-attachments/assets/649c2baa-eade-435b-8c96-241dfe2d4eb1)
+>
+>
+>![Image](https://github.com/user-attachments/assets/9ac4c885-33c2-4aef-9121-6c074298cc8e)
 
 
 
@@ -219,9 +243,9 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 
 # 7. 한 줄 회고
 - 박유진: Logistic regression, KNN 모델의 성능을 개선하기 위해 직접 grid search, log 변환, optuna 등을 적용해보면서 전처리의 중요성과 각 모델의 하이퍼파라미터에 대해 더 잘 이해할 수 있었다.  
-- 서예찬:
+- 서예찬: 이번 프로젝트를 하면서 EDA,ML과정에서 부족한 부분을 팀원들에게 많이배웠고,특히 ML과정에서 예전에는 써보지않았던 optuna 등을 적용하며 하이퍼파라미터 조정등을 통해 머신의 성능을 높이는 과정에 대해 이해도가 높아진것같다.
 - 조이현: EDA 과정에서 범주형 데이터 컬럼별 데이터프레임에 대한 상관계수 편차가 큰 것을 확인했다. 따라서, 각각의 최적화된 머신러닝을 튜닝하는 것까지 시도해보고 싶었지만, 시간적 여건이 되지 않아 아쉬울 따름이다.
-- 허정윤: 
+- 허정윤: 앙상블 모델을 보팅이나 스태킹으로 또 앙상블을 시키는 작업이 가능하단걸 깨달았다.예측 목적에 따라서 각 평가 지표들의 중요성이 달라진다는걸 깨달았다.특히 고객 이탈의 경우 재현율이 중요하지만 정밀도가 너무 낮아지면 기존 고객을 잃을수 있다
 
 ## README.md 작성 내용
 
