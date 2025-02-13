@@ -74,7 +74,7 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 - 데이터 수집: 고객의 신용점수, 근속년수, 이용 상품개수, 활동 여부 패턴 등 ABC 은행의 데이터셋을 활용
 - 데이터 전처리 및 시각화: 결측치 및 이상치 확인, 데이터 정규화 등의 과정을 수행
 - 특성 엔지니어링: 고객 연령, 소득 수준, 신용 점수, 계좌 잔액, 이용 국가, 성별 등의 중요한 특성 추출
-- 모델 사용: XGBoost, RandomForest, CatBoost, AdaBoost 등 다양한 머신러닝 알고리즘을 적용하여 예측 성능 비교 분석
+- 모델 사용: XGBoost, RandomForest, CatBoost, AdaBoost 등 다양한 머신러닝 알고리즘을 적용하여 예측 성능 비교 분석 (기타 사용 모델: LogisticRegression, KNN, LightGBM, DecisionTree, RBF-SVM, Poly-SVM, Naive Bayes)
 - 모델 평가: 상위 4개 모델에 대한 앙상블을 적용하여 정확도, 정밀도, 재현율, F1-score 및 ROC-AUC 등의 성능 지표를 활용한 모델 고도화
 
 ### 기대 효과
@@ -219,8 +219,25 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 # 5. 인공지능 학습 결과서
 - 데이터셋 전처리 과정: 데이터셋 시각화에 따른 비선형 데이터셋 처리를 위해 Log 변환과 StandardScaler 과정을 거침. 다만, 전체 데이터셋 중 target의 비율이 약 20%에 해당되어 over-sampling 처리는 하지 않음.
 - ML 선택 이유: 본 데이터셋은 1만 개의 row와 12개의 column을 가진 적은 규모의 데이터셋임. 따라서 DL을 활용할 경우 overfitting의 가능성이 우려되어 ML을 선택하였음.
-- ML 모델 선택 이유: 해당 ABC 은행의 비선형 데이터셋에 최적화된 ensemble 모델을 목표로 11개의 ML 모델의 분석결과 지표 중 분류성능이 뛰어난 4개의 상위 모델을 선별하였음. 조합 방식은 선별된 네 개의 모델 중, boost 모델이 세 개가 포함되어 stacking이 제일 적절하다고 판단함.
-- 학습된 인공지능 모델: XGBoost (Base), RandomForest (Base), CatBoost (Base), AdaBoost (Meta, Base) -> Ensemble Model (Stacking)
+- ML 모델 선택 이유: 해당 ABC 은행의 비선형 데이터셋에 최적화된 ensemble 모델을 목표로 11개의 ML 모델의 분석결과 지표 중 분류성능이 뛰어난 4개의 상위 모델을 선별하였음. 조합 방식은 voting과 stacking 중, 더 나은 결과값을 보여준 stacking 앙상블 모델을 채택함.
+- 학습된 인공지능 모델: XGBoost (Base), RandomForest (Base), AdaBoost (Base), CatBoost (Base, Meta) -> Ensemble Model (Stacking)
+>
+> - XGBoost (Base)
+>![image](https://github.com/user-attachments/assets/f2631977-4a87-43d6-a701-1d11d210493b)
+> 
+> - RandomForest (Base)
+> ![image](https://github.com/user-attachments/assets/59515057-ce73-467b-8305-4d3235afd4d5)
+>
+> - AdaBoost (Base)
+>![image](https://github.com/user-attachments/assets/05513878-3fe9-4840-9053-93d33fab289e)
+>
+> - CatBoost (Base, Meta)
+>![image](https://github.com/user-attachments/assets/01a87d85-becd-41da-86c7-3be7f30b1a6e)
+>
+> - Ensemble (Stacking)
+>![image](https://github.com/user-attachments/assets/faf65416-eecc-4e42-8b9c-1d5de05e671b)
+>
+
 <br>
 
 # 6. 수행결과 (테스트 결과 화면 또는 시연 페이지)
