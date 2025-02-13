@@ -40,12 +40,13 @@
     </tr>
   </tbody>
 </table>
+<br>
 
 # 1. Project Introduction (프로젝트 개요)
 
 ### 프로젝트 명
 
-**👑MVP👑**: 데이터 기반 ABC 은행 가입고객 이탈자 분석 및 예측 
+- **👑MVP👑**: 데이터 기반 ABC 은행 가입고객 이탈자 분석 및 예측
 
 ### 프로젝트 소개
 - 본 프로젝트는 머신러닝 및 데이터 분석 기법을 활용하여 ABC 은행 고객의 이탈 가능성을 예측하는 모델을 개발하는 것을 목표로 합니다. 이를 통해 ABC 은행은 고객 이탈을 사전에 감지하고, 
@@ -53,14 +54,18 @@
 
 ### 프로젝트 배경
 
-
-
 ![Image](https://github.com/user-attachments/assets/e5e40701-b5f1-406a-ac07-acdb56f255df)
 
+- 현대 금융 시장에서 고객 유지는 은행 및 금융 기관의 지속 가능한 성장을 위해 필수적인 요소입니다.
 
+![image](https://github.com/user-attachments/assets/3a3ecd71-6f16-42f6-b811-c7069a9588a7)
 
-현대 금융 시장에서 고객 유지는 은행 및 금융 기관의 지속 가능한 성장을 위해 필수적인 요소입니다. 연구논문-"The Economics of E-Loyalty" (2002) by Frederick F. Reichheld & Phil Schefte-에 따르면, 기존 고객을 유지하는 비용은 신규 고객을 유치하는 비용보다 5배 저렴하다고 알려져 있습니다. 따라서, 기존 고객의 이탈을 방지하는 것이 운영 비용 절감 및 수익성 강화에 효과적인 전략이 될 수 있습니다.
-그러나, 많은 금융 기관은 고객 이탈이 발생한 후에 대응하는 사후 관리 방식에 의존하고 있어 실질적인 비용 절감과 고객 유지 효과를 극대화하는 데 어려움을 겪고 있습니다. 이에 따라, 사전적으로 고객 이탈을 예측하고 선제적으로 대응할 수 있는 데이터 기반의 고객 이탈 예측 모델이 필요합니다.
+- Harvard Business Review Reprint-"The Economics of E-Loyalty" (2002) by Frederick F. Reichheld & Phil Schefte-에 따르면, 기존 고객을 유지하는 비용은 신규 고객을 유치하는 비용보다 5배 저렴하다고 알려져 있습니다. 따라서, 기존 고객의 이탈을 방지하는 것이 운영 비용 절감 및 수익성 강화에 효과적인 전략이 될 수 있습니다.
+
+  ![image](https://github.com/user-attachments/assets/fd4d2a7e-0580-43ca-9aed-375a82904b1f)
+
+- 그러나, Sage Journal-Reducing Adverse Selection through Customer Relationship Management
+Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이탈이 발생한 후에 대응하는 사후 관리 방식에 의존하고 있어 실질적인 비용 절감과 고객 유지 효과를 극대화하는 데 어려움을 겪고 있습니다. 이에 따라, 사전적으로 고객 이탈을 예측하고 선제적으로 대응할 수 있는 데이터 기반의 고객 이탈 예측 모델이 필요합니다.
 
 #### 데이터 및 접근 방법
 - 데이터 수집: 고객의 거래 내역, 계좌 유형, 대출 이력, 고객 서비스 이용 패턴 등의 데이터를 분석
