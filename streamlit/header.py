@@ -7,4 +7,4 @@ def header():
     with col3:
         st.page_link('pages/1_predict.py', label='PREDICT')
     with col4:
-        st.page_link('pages/2_analyze.py', label='ANYLYZE')
+        st.page_link('pages/2_analysis.py', label='ANYLYZE')
