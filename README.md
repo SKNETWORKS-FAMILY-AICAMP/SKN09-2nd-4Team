@@ -123,6 +123,19 @@
 > https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset
 
 
+### 데이터 전처리 
+
+> **1) 데이터 내용 확인**
+![Image](https://github.com/user-attachments/assets/5320d17c-6150-4db4-9222-68cb717fba02)
+
+포함된 주요 변수 : credit_score (신용 점수), country (국가), age (나이), tenure (가입 기간),churn (이탈 여부)등의 주요 변수
+데이터 크기 : 총 10000명의 고객 데이터, 12개의 변수 (2개의 object형 변수, 8개의 int형 변수, 2개의 float형 변수)
+
+> **2) 결측치 확인**
+ ![Image](https://github.com/user-attachments/assets/51f85bf6-2824-4b7b-a28c-434d9914b3a7)
+
+결측치 확인결과 결측치없음
+
 
 
 
