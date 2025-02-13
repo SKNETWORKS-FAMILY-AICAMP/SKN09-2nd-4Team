@@ -54,7 +54,7 @@
 
 ### 프로젝트 배경
 
-![Image](https://github.com/user-attachments/assets/e5e40701-b5f1-406a-ac07-acdb56f255df)
+![image](https://github.com/user-attachments/assets/cb482edb-53a0-40a9-a7d1-17ef4e1a8a18)
 
 - 현대 금융 시장에서 고객 유지는 은행 및 금융 기관의 지속 가능한 성장을 위해 필수적인 요소입니다.
 
