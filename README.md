@@ -159,6 +159,14 @@
 >
 >
 >![Image](https://github.com/user-attachments/assets/dd1cd53f-0987-47e0-883c-1e69532c10c3)
+>
+>이상치 확인 결과, age(나이) 컬럼에서 이상치가 발견되었지만, 검토한 결과 고령 고객들의 나이가 높은 것으로 확인되었음. 따라서 별도의 조치는 취하지 않았음.
+>
+>
+>**4)데이터 시각화(임시)**
+>
+>
+>![Image](https://github.com/user-attachments/assets/50010858-bfdc-462e-adaf-91d9d99ef55c)
 
 
 
