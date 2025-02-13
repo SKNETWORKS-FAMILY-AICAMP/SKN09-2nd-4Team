@@ -1,64 +1,156 @@
 import os
-import numpy as np 
-import pandas as pd 
-import streamlit as st 
-import altair as alt 
+import numpy as np
+import pandas as pd
+import streamlit as st
+import altair as alt
+from header import header, footer
+import random
+
+# 페이지 설정
+st.set_page_config(page_title="My App", page_icon="🚀", layout="centered", initial_sidebar_state="collapsed")
 
 # 현재 파일의 경로
-file_path = os.path.abspath(__file__) # 정규화된 절대화된 버전 반환, __file__ : 경로, 이 파일의 경로를 말하는 듯 
-path = os.path.dirname(file_path) # 경로의 디렉토리 이름을 반환 (이 파일의 이름을 제외한 디렉토리 경로 반환-> 이를 통해 현재 파일이 위치한 폴더 경로를 쉽게 추출할 수 있음)
+file_path = os.path.abspath(__file__)  # 현재 파일의 절대 경로
+path = os.path.dirname(file_path)  # 디렉토리 경로
+load_path = os.path.join(path, '../../data/Bank Customer Churn Prediction.csv')  # 데이터 파일 경로
+df = pd.read_csv(load_path)
+df_id_drop = df.drop('customer_id', axis=1)  # 불필요한 'customer_id' 컬럼 삭제
 
+# 성별, 신용카드, 활성 회원 여부 변환 매핑
+gender_map = {'남성': 'Male', '여성': 'Female'}
+credit_card_map = {'존재': 1, '비존재': 0}
+active_member_map = {'활성': 0, '비활성': 1}
+
+header()
+
+# 사이드바 필터링 옵션
 st.sidebar.title("필터링")
 
-ages = ['청년', '중년', '장년', '노년']
-age = ages.index(st.sidebar.selectbox('나이', ages))
-age = [29, 50, 70, 90][age]
-# credit_score = st.number_input('신용점수', min_value=300, max_value=850)
-credit_score = st.sidebar.slider('신용점수', min_value=300, max_value=850, value=500)
-# estimated_salary = st.number_input('추정 급여', min_value=0)
-gender = st.sidebar.segmented_control('성별', ['남성', '여성'], default='남성')
-gender = ['남성', '여성'].index(gender)
+# 나이
+age_min = df['age'].min()
+age_max = df['age'].max()
+age_low, age_high = st.sidebar.slider('나이', min_value=0, max_value=100, value=(age_min, age_max), step=1)
 
-    # balance = st.number_input('잔액', min_value=0)
-balance = st.sidebar.slider('잔액', min_value=0, max_value=250000, value=100000)
-# products_number = st.number_input('상품 수', min_value=1, max_value=4)
-products_number = st.sidebar.slider('상품 수', min_value=1, max_value=4, value=2)
-# tenure = st.number_input('가입기간', min_value=0, max_value=20)
-active_member = st.sidebar.checkbox('활성 회원 여부')
+# 신용점수
+credit_score_min = df['credit_score'].min()
+credit_score_max = df['credit_score'].max()
+credit_score_low, credit_score_high = st.sidebar.slider('신용점수', min_value=0, max_value=1000, value=(credit_score_min, credit_score_max), step=50)
 
-    # country = st.selectbox('국가', ['France', 'Spain', 'Germany'])
-# country = ['France', 'Spain', 'Germany'].index(country)
-tenure = st.sidebar.slider('가입기간', min_value=0, max_value=20, value=10)
-estimated_salary = st.sidebar.slider(
-    '추정 급여', min_value=0, max_value=200000, value=100000)
-credit_card = st.sidebar.checkbox('신용카드 여부')
+# 성별
+gender_check = st.sidebar.segmented_control('성별', ['남성', '여성'], selection_mode="multi")
+if gender_check:  # 성별 값이 선택되었을 때만 변환
+    gender_check = [gender_map[g] for g in gender_check]
+
+# 잔액
+balance_min = int(df['balance'].min())
+balance_max = int(df['balance'].max())
+balance_low, balance_high = st.sidebar.slider('잔액', min_value=0, max_value=1000000, value=(balance_min, balance_max), step=1000)
+
+# 상품 수
+products_number_min = df['products_number'].min()
+products_number_max = df['products_number'].max()
+products_number_low, products_number_high = st.sidebar.slider('상품 수', min_value=1, max_value=4, value=(products_number_min, products_number_max))
+
+# 가입 기간
+tenure_min = df['tenure'].min()
+tenure_max = df['tenure'].max()
+tenure_low, tenure_high = st.sidebar.slider('가입 기간', min_value=0, max_value=50, value=(tenure_min, tenure_max))
+
+# 활성 회원 여부
+active_member_check = st.sidebar.segmented_control('활성 회원 여부', ['활성', '비활성'], selection_mode='multi')
+if active_member_check:  # 활성 회원 값이 선택되었을 때만 변환
+    active_member_check = [active_member_map[a] for a in active_member_check]
+
+# 국가
+country_check = st.sidebar.segmented_control('국가', ['France', 'Spain', 'Germany'], selection_mode='multi')
+
+# 추정 급여
+estimated_salary_min = int(df['estimated_salary'].min())
+estimated_salary_max = int(df['estimated_salary'].max())
+estimated_salary_low, estimated_salary_high = st.sidebar.slider('추정 급여', min_value=0, max_value=20000, value=(estimated_salary_min, estimated_salary_max), step=1000)
+
+# 신용카드 여부
+credit_card_check = st.sidebar.segmented_control('신용카드 여부', ['존재', '비존재'], selection_mode='multi')
+if credit_card_check:  # 신용카드 여부 값이 선택되었을 때만 변환
+    credit_card_check = [credit_card_map[c] for c in credit_card_check]
+
+# 색상 팔레트 정의 (밝은 색상)
+color_palette = ['#00BFFF', '#1E90FF', '#87CEFA', '#FFD700', '#FFA500', '#32CD32', '#FF69B4', '#8A2BE2', '#DC143C']
+
+if st.sidebar.button('확인'):
+    df_selection = df_id_drop[ 
+        (df['age'] >= age_low) & (df['age'] < age_high) & 
+        (df['credit_score'] >= credit_score_low) & (df['credit_score'] < credit_score_high) & 
+        (df['gender'].isin(gender_check)) & 
+        (df['balance'] >= balance_low) & (df['balance'] < balance_high) & 
+        (df['products_number'] >= products_number_low) & (df['products_number'] < products_number_high) & 
+        (df['tenure'] >= tenure_low) & (df['tenure'] < tenure_high) & 
+        (df['active_member'].isin(active_member_check)) & 
+        (df['country'].isin(country_check)) & 
+        (df['estimated_salary'] >= estimated_salary_low) & (df['estimated_salary'] < estimated_salary_high) & 
+        (df['credit_card'].isin(credit_card_check))
+    ]
+
+    # 1번째 행: 테이블
+    st.subheader('필터링된 데이터')  # 제목 추가
+    st.dataframe(df_selection)
+
+    # 2번째 행: 나이별 이탈자 (차트)
+    st.subheader('나이별 이탈자')  # 제목 추가
+    age_chart = alt.Chart(df_selection).mark_bar().encode(
+        x='age:O',
+        y='count():Q',
+        color=alt.Color('churn:N', scale=alt.Scale(range=random.sample(color_palette, len(df_selection['churn'].unique()))))
+    )
+    st.altair_chart(age_chart)
+
+    # 3번째 행: 도넛 차트 (상품 수) 옆에 신용점수 vs 잔액 산점도 추가
+
+    col3, col4 = st.columns([1, 1])  # 두 열로 분할
+    with col3:
+        st.subheader('상품 수별 고객 분포')  # 제목 추가
+        donut = alt.Chart(df_selection).mark_arc(innerRadius=50).encode(
+            theta="products_number",
+            color=alt.Color('products_number:N', scale=alt.Scale(range=random.sample(color_palette, len(df_selection['products_number'].unique()))))
+        )
+        st.altair_chart(donut)
+        
+    with col4:
+        st.subheader('신용점수 vs 잔액')  # 제목 추가
+        churn_credit_score_chart = alt.Chart(df_selection).mark_point().encode(
+            x='credit_score:Q',
+            y='balance:Q',
+            color=alt.Color('churn:N', scale=alt.Scale(range=random.sample(color_palette, len(df_selection['churn'].unique()))))
+        )
+        st.altair_chart(churn_credit_score_chart)
+
+    # 4번째 행: 기간별 이탈자 차트 (산점도)
+
+    col5, col6 = st.columns([3, 2])
+    with col5:
+        st.subheader('가입 기간별 이탈자')  # 제목 추가
+        churn_tenure_chart = alt.Chart(df_selection).mark_line().encode(
+            x='tenure:Q',
+            y='count():Q',
+            color=alt.Color('churn:N', scale=alt.Scale(range=random.sample(color_palette, len(df_selection['churn'].unique()))))
+        )
+        st.altair_chart(churn_tenure_chart)
+
+    with col6:
+        st.subheader('상품 수별 이탈자')  # 제목 추가
+        churn_products_number_chart = alt.Chart(df_selection).mark_bar().encode(
+            x='products_number:O',
+            y='count():Q',
+            color=alt.Color('churn:N', scale=alt.Scale(range=random.sample(color_palette, len(df_selection['churn'].unique()))))
+        )
+        st.altair_chart(churn_products_number_chart)
+
+else:
+    st.dataframe(df)
+    st.write('세부 사항을 확인하기 위해선 좌측의 필터링을 적용하세요.')
+
+footer()
 
 
-st.title("고객 이탈 예측")
-st.write('앙상블(스태킹) 모델을 사용한 고객 이탈 예측입니다.')
-load_path = os.path.join(path, '../../data/Bank Customer Churn Prediction.csv') # 어떤 위치에 접근하고 싶은지 명시, join 으로 여로 경로를 결합
 
-df = pd.read_csv(load_path)
-# customer_id,credit_score,country,gender,age,tenure,balance,products_number,credit_card,active_member,estimated_salary,churn
 
-df_id_drop = df.drop('customer_id', axis=1)
-df_numitic = df.select_dtypes('number')
-# df_str = df.select_dtypes('str')
-
-st.dataframe(df_id_drop, use_container_width=True)
-
-st.area_chart(data=df_numitic, x = 'churn', y = ['tenure', 'products_number'],use_container_width=True) #, *, x=없음, y=없음, x_라벨=없음, y_라벨=없음, 색상=없음, 스택=없음, 너비=없음, 높이=없음, use_container_width=True)
-
-st.bar_chart(data=df_id_drop, x='churn', y=['tenure', 'products_number'], horizontal=False, stack=False, use_container_width=True)
-
-st.line_chart(data=df_numitic, x='churn', y=['tenure', 'products_number'], use_container_width=True)
-
-# 얼만틈의 비용을 줄일 수 있는지 계산
-
-st.scatter_chart(data=df_numitic, x='churn', y=['tenure', 'products_number'], x_label=None, y_label=None, color=None, size=None, width=None, height=None, use_container_width=True)
-
-donut = alt.Chart(df_numitic).mark_arc(innerRadius=50).encode(
-    theta="products_number",
-)
-
-st.altair_chart(donut)
