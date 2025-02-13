@@ -214,8 +214,7 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 >![Image](https://github.com/user-attachments/assets/9ac4c885-33c2-4aef-9121-6c074298cc8e)
 >
 >**결론: 데이터셋의 비선형성 및 age 컬럼의 왜도가 1이 넘는 것을 확인. 또한 각 feature와 이탈율간의 상관관계에 따른 중요도 파악.**
-
-----
+<br>
 
 # 5. 인공지능 학습 결과서
 - 데이터셋 전처리 과정: 데이터셋 시각화에 따른 비선형 데이터셋 처리를 위해 Log 변환과 StandardScaler 과정을 거침. 다만, 전체 데이터셋 중 target의 비율이 약 20%에 해당되어 over-sampling 처리는 하지 않음.
