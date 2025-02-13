@@ -220,7 +220,7 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 - 데이터셋 전처리 과정: 데이터셋 시각화에 따른 비선형 데이터셋 처리를 위해 Log 변환과 StandardScaler 과정을 거침. 다만, 전체 데이터셋 중 target의 비율이 약 20%에 해당되어 over-sampling 처리는 하지 않음.
 - ML 선택 이유: 본 데이터셋은 1만 개의 row와 12개의 column을 가진 적은 규모의 데이터셋임. 따라서 DL을 활용할 경우 overfitting의 가능성이 우려되어 ML을 선택하였음.
 - ML 모델 선택 이유: 해당 ABC 은행의 비선형 데이터셋에 최적화된 ensemble 모델을 목표로 11개의 ML 모델의 분석결과 지표 중 분류성능이 뛰어난 4개의 상위 모델을 선별하였음. 조합 방식은 선별된 네 개의 모델 중, boost 모델이 세 개가 포함되어 stacking이 제일 적절하다고 판단함.
-- 학습된 인공지능 모델: XGBoost(Base), RandomForest(Base), CatBoost(Base), AdaBoost(Meta, Base) -> Ensemble Model (Stacking)
+- 학습된 인공지능 모델: XGBoost (Base), RandomForest (Base), CatBoost (Base), AdaBoost (Meta, Base) -> Ensemble Model (Stacking)
 <br>
 
 # 6. 수행결과 (테스트 결과 화면 또는 시연 페이지)
