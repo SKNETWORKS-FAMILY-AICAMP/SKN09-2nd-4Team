@@ -74,7 +74,9 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 - 데이터 수집: 고객의 신용점수, 근속년수, 이용 상품개수, 활동 여부 패턴 등 ABC 은행의 데이터셋을 활용
 - 데이터 전처리 및 시각화: 결측치 및 이상치 확인, 데이터 정규화 등의 과정을 수행
 - 특성 엔지니어링: 고객 연령, 소득 수준, 신용 점수, 계좌 잔액, 이용 국가, 성별 등의 중요한 특성 추출
-- 모델 사용: **XGBoost, RandomForest, CatBoost, AdaBoost** 등 다양한 머신러닝 알고리즘을 적용하여 예측 성능 비교 분석 (기타 사용 모델: LogisticRegression, KNN, LightGBM, DecisionTree, RBF-SVM, Poly-SVM, Naive Bayes)
+- 모델 사용: **XGBoost, RandomForest, CatBoost, AdaBoost** 등 다양한 머신러닝 알고리즘을 적용하여 예측 성능 비교 분석
+
+  &nbsp;(기타 사용 모델: LogisticRegression, KNN, LightGBM, DecisionTree, RBF-SVM, Poly-SVM, Naive Bayes)
 - 모델 평가: 상위 4개 모델에 대한 앙상블을 적용하여 정확도, 정밀도, 재현율, F1-score 및 ROC-AUC 등의 성능 지표를 활용한 모델 고도화
 
 ### 기대 효과
