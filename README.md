@@ -50,7 +50,7 @@
 - **👑MVP👑**: 데이터 기반 ABC 은행 가입고객 이탈자 분석 및 예측
 
 ### 목표
-- 본 프로젝트는 데이터 분석 및 머신러닝을 활용하여 ABC 은행 고객의 이탈 가능성을 예측하는 모델을 개발하는 것입니다.
+- 본 프로젝트는 데이터 분석 및 머신러닝을 활용하여 ABC 은행 고객의 **이탈 가능성**을 예측하는 모델을 개발하는 것입니다.
 - 이를 통해 ABC 은행은 고객 이탈을 사전에 감지하고, 맞춤형 마케팅 전략을 수립하여 고객 유지율을 높일 수 있을 것입니다.
 
 ### 프로젝트 배경
@@ -62,19 +62,19 @@
 
 ![image](https://github.com/user-attachments/assets/3a3ecd71-6f16-42f6-b811-c7069a9588a7)
 
-- Harvard Business Review Reprint-"The Economics of E-Loyalty" (2002) by Frederick F. Reichheld & Phil Schefte-에 따르면, 기존 고객을 유지하는 비용은 신규 고객을 유치하는 비용보다 5배 저렴하다고 알려져 있습니다. 따라서, 기존 고객의 이탈을 방지하는 것이 운영 비용 절감 및 수익성 강화에 효과적인 전략이 될 수 있습니다.
+- Harvard Business Review Reprint-"The Economics of E-Loyalty" (2002) by Frederick F. Reichheld & Phil Schefte-에 따르면, 기존 고객을 유지하는 비용은 신규 고객을 유치하는 비용보다 **5배 저렴**하다고 알려져 있습니다. 따라서, 기존 고객의 이탈을 방지하는 것이 운영 비용 절감 및 수익성 강화에 효과적인 전략이 될 수 있습니다.
 <br>
 
   ![image](https://github.com/user-attachments/assets/fd4d2a7e-0580-43ca-9aed-375a82904b1f)
 
 - 하지만 Sage Journal-Reducing Adverse Selection through Customer Relationship Management
-Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이탈이 발생한 후에 대응하는 사후 관리 방식에 의존하고 있어 실질적인 비용 절감과 고객 유지 효과를 극대화하는 데 어려움을 겪고 있습니다. 이에 따라, 사전적으로 고객 이탈을 예측하고 선제적으로 대응할 수 있는 데이터 기반의 고객 이탈 예측 모델이 필요하게 되었습니다.
+Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이탈이 발생한 후에 대응하는 사후 관리 방식에 의존하고 있어 실질적인 비용 절감과 고객 유지 효과를 극대화하는 데 어려움을 겪고 있습니다. 이에 따라, 사전적으로 고객 이탈을 예측하고 선제적으로 대응할 수 있는 **데이터 기반의 고객 이탈 예측 모델**이 필요하게 되었습니다.
 
 ### 분석 및 접근 방법
 - 데이터 수집: 고객의 신용점수, 근속년수, 이용 상품개수, 활동 여부 패턴 등 ABC 은행의 데이터셋을 활용
 - 데이터 전처리 및 시각화: 결측치 및 이상치 확인, 데이터 정규화 등의 과정을 수행
 - 특성 엔지니어링: 고객 연령, 소득 수준, 신용 점수, 계좌 잔액, 이용 국가, 성별 등의 중요한 특성 추출
-- 모델 사용: XGBoost, RandomForest, CatBoost, AdaBoost 등 다양한 머신러닝 알고리즘을 적용하여 예측 성능 비교 분석 (기타 사용 모델: LogisticRegression, KNN, LightGBM, DecisionTree, RBF-SVM, Poly-SVM, Naive Bayes)
+- 모델 사용: **XGBoost, RandomForest, CatBoost, AdaBoost** 등 다양한 머신러닝 알고리즘을 적용하여 예측 성능 비교 분석 (기타 사용 모델: LogisticRegression, KNN, LightGBM, DecisionTree, RBF-SVM, Poly-SVM, Naive Bayes)
 - 모델 평가: 상위 4개 모델에 대한 앙상블을 적용하여 정확도, 정밀도, 재현율, F1-score 및 ROC-AUC 등의 성능 지표를 활용한 모델 고도화
 
 ### 기대 효과
@@ -203,7 +203,7 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 >
 >![Image](https://github.com/user-attachments/assets/4f8e096c-5d26-4f80-9b85-ec48bebf6801)
 >
-> - 왜도를 확인한 결과 Age 컬럼의 왜도가 1이 넘는것을 확인, Log 변환 처리과정을 거침
+> - 왜도를 확인한 결과 Age 컬럼의 왜도가 1이 넘는 것을 확인, Log 변환 처리과정을 거침
 >
 >**4-6) 추가분석과정**
 >
@@ -217,10 +217,10 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 <br>
 
 # 5. 인공지능 학습 결과서
-- 데이터셋 전처리 과정: 데이터셋 시각화에 따른 비선형 데이터셋 처리를 위해 Log 변환과 StandardScaler 과정을 거침. 다만, 전체 데이터셋 중 target의 비율이 약 20%에 해당되어 over-sampling 처리는 하지 않음.
+- 데이터셋 전처리 과정: 데이터셋 시각화에 따른 비선형 데이터셋 처리를 위해 **Log 변환과 StandardScaler 과정**을 거침. 다만, 전체 데이터셋 중 target의 비율이 약 20%에 해당되어 over-sampling 처리는 하지 않음.
 - ML 선택 이유: 본 데이터셋은 1만 개의 row와 12개의 column을 가진 적은 규모의 데이터셋임. 따라서 DL을 활용할 경우 overfitting의 가능성이 우려되어 ML을 선택하였음.
-- ML 모델 선택 이유: 해당 ABC 은행의 비선형 데이터셋에 최적화된 ensemble 모델을 목표로 11개의 ML 모델의 분석결과 지표 중 분류성능이 뛰어난 4개의 상위 모델을 선별하였음. 조합 방식은 voting과 stacking 중, 더 나은 결과값을 보여준 stacking 앙상블 모델을 채택함.
-- 학습된 인공지능 모델: XGBoost (Base), RandomForest (Base), AdaBoost (Base), CatBoost (Base, Meta) -> Ensemble Model (Stacking)
+- ML 모델 선택 이유: 해당 ABC 은행의 비선형 데이터셋에 최적화된 ensemble 모델을 목표로 11개의 ML 모델의 분석결과 지표 중 분류성능이 뛰어난 4개의 상위 모델을 선별하였음. 조합 방식은 voting과 stacking 중, 더 나은 결과값을 보여준 **stacking 앙상블 모델**을 채택함.
+- 학습된 인공지능 모델: **XGBoost (Base), RandomForest (Base), AdaBoost (Base), CatBoost (Base, Meta) -> Ensemble Model (Stacking)**
 >
 > - XGBoost (Base)
 >![image](https://github.com/user-attachments/assets/f2631977-4a87-43d6-a701-1d11d210493b)
@@ -247,9 +247,9 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 <br>
 
 # 7. 한 줄 회고
-- 박유진: Logistic regression, KNN 모델의 성능을 개선하기 위해 직접 GridSearchCV, Log 변환, optuna 등을 적용해보면서 전처리의 중요성과 각 모델의 하이퍼 파라미터에 대해 더 잘 이해할 수 있었다.  
+- 박유진: LogisticRegression, KNN 모델의 성능을 개선하기 위해 직접 GridSearchCV, Log 변환, optuna 등을 적용해보면서 전처리의 중요성과 각 모델의 하이퍼 파라미터에 대해 더 잘 이해할 수 있었다.  
 - 서예찬: 이번 프로젝트를 하면서 EDA, ML 튜닝 과정에서 부족한 부분을 팀원들에게 많이 배웠고, 특히 ML 튜닝 과정에서 예전에는 써보지 않았던 optuna 등을 적용하며 하이퍼 파라미터 조정 등을 통해 model의 성능을 높이는 과정에 대해 이해도가 높아진 것 같다.
-- 조이현: EDA 과정에서 범주형 데이터 컬럼별로 분류했을때, 이탈율 간의 상관계수 편차가 큰 것을 확인했다. 따라서, 각각의 최적화된 머신러닝을 튜닝하는 것까지 시도해보고 싶었지만, 앙상블 모델의 스태킹에 있어서 메타 모델과 베이스 모델의 예외적인 중복 설계를 새로이 발견하고 전체 데이터셋에 적용하는 시행착오를 겪은 결과, 시간적 여건이 되지 않아 심화 분석에 따른 머신러닝 최적화를 하지 못해 아쉬울 따름이다.
+- 조이현: EDA 과정에서 범주형 데이터 컬럼별로 분류했을 때, 이탈율 간의 상관계수 편차가 큰 것을 확인했다. 따라서, 각각의 최적화된 머신러닝을 튜닝하는 것까지 시도해보고 싶었지만, 앙상블 모델의 스태킹에 있어서 메타 모델과 베이스 모델의 예외적인 중복 설계를 새로이 발견하고 전체 데이터셋에 적용하는 시행착오를 겪은 결과, 시간적 여건이 되지 않아 심화 분석에 따른 머신러닝 최적화를 하지 못해 아쉬울 따름이다.
 - 허정윤: 앙상블 모델을 voting이나 stacking으로 또 앙상블을 시키는 작업이 가능하단 걸 깨달았다. 예측 목적에 따라서 각 평가 지표들의 중요성이 달라진다는 걸 배웠다. 특히 고객 이탈의 경우 recall이 중요하지만 precision이 너무 낮아지면 기존 고객을 잃을 수 있다는 것을 익혔다.
 <br>
 
