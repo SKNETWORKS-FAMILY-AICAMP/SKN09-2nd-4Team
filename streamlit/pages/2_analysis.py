@@ -2,6 +2,7 @@ import os
 import numpy as np 
 import pandas as pd 
 import streamlit as st 
+import altair as alt 
 
 # 현재 파일의 경로
 file_path = os.path.abspath(__file__) # 정규화된 절대화된 버전 반환, __file__ : 경로, 이 파일의 경로를 말하는 듯 
@@ -51,3 +52,13 @@ st.area_chart(data=df_numitic, x = 'churn', y = ['tenure', 'products_number'],us
 st.bar_chart(data=df_id_drop, x='churn', y=['tenure', 'products_number'], horizontal=False, stack=False, use_container_width=True)
 
 st.line_chart(data=df_numitic, x='churn', y=['tenure', 'products_number'], use_container_width=True)
+
+# 얼만틈의 비용을 줄일 수 있는지 계산
+
+st.scatter_chart(data=df_numitic, x='churn', y=['tenure', 'products_number'], x_label=None, y_label=None, color=None, size=None, width=None, height=None, use_container_width=True)
+
+donut = alt.Chart(df_numitic).mark_arc(innerRadius=50).encode(
+    theta="products_number",
+)
+
+st.altair_chart(donut)
