@@ -7,6 +7,32 @@ import streamlit as st
 file_path = os.path.abspath(__file__) # 정규화된 절대화된 버전 반환, __file__ : 경로, 이 파일의 경로를 말하는 듯 
 path = os.path.dirname(file_path) # 경로의 디렉토리 이름을 반환 (이 파일의 이름을 제외한 디렉토리 경로 반환-> 이를 통해 현재 파일이 위치한 폴더 경로를 쉽게 추출할 수 있음)
 
+st.sidebar.title("필터링")
+
+ages = ['청년', '중년', '장년', '노년']
+age = ages.index(st.sidebar.selectbox('나이', ages))
+age = [29, 50, 70, 90][age]
+# credit_score = st.number_input('신용점수', min_value=300, max_value=850)
+credit_score = st.sidebar.slider('신용점수', min_value=300, max_value=850, value=500)
+# estimated_salary = st.number_input('추정 급여', min_value=0)
+gender = st.sidebar.segmented_control('성별', ['남성', '여성'], default='남성')
+gender = ['남성', '여성'].index(gender)
+
+    # balance = st.number_input('잔액', min_value=0)
+balance = st.sidebar.slider('잔액', min_value=0, max_value=250000, value=100000)
+# products_number = st.number_input('상품 수', min_value=1, max_value=4)
+products_number = st.sidebar.slider('상품 수', min_value=1, max_value=4, value=2)
+# tenure = st.number_input('가입기간', min_value=0, max_value=20)
+active_member = st.sidebar.checkbox('활성 회원 여부')
+
+    # country = st.selectbox('국가', ['France', 'Spain', 'Germany'])
+# country = ['France', 'Spain', 'Germany'].index(country)
+tenure = st.sidebar.slider('가입기간', min_value=0, max_value=20, value=10)
+estimated_salary = st.sidebar.slider(
+    '추정 급여', min_value=0, max_value=200000, value=100000)
+credit_card = st.sidebar.checkbox('신용카드 여부')
+
+
 st.title("고객 이탈 예측")
 st.write('앙상블(스태킹) 모델을 사용한 고객 이탈 예측입니다.')
 load_path = os.path.join(path, '../../data/Bank Customer Churn Prediction.csv') # 어떤 위치에 접근하고 싶은지 명시, join 으로 여로 경로를 결합
