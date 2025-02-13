@@ -3,7 +3,8 @@
 import os
 import streamlit as st
 from joblib import load
-from header import header
+from header import header, footer
+import random
 
 # 현재 파일의 경로
 file_path = os.path.abspath(__file__)
@@ -32,6 +33,8 @@ with col1:
     # credit_score = st.number_input('신용점수', min_value=300, max_value=850)
     credit_score = st.slider('신용점수', min_value=300, max_value=850, value=500)
     # estimated_salary = st.number_input('추정 급여', min_value=0)
+    gender = st.segmented_control('성별', ['남성', '여성'], default='남성')
+    gender = ['남성', '여성'].index(gender)
 
 
 with col2:
@@ -49,7 +52,8 @@ with col3:
     estimated_salary = st.slider(
         '추정 급여', min_value=0, max_value=200000, value=100000)
     credit_card = st.checkbox('신용카드 여부')
-input_data = [[credit_score, age, tenure, balance, products_number,
+    # [credit_score	country	gender	age	tenure	balance	products_number	credit_card	active_member	estimated_salary	]
+input_data = [[credit_score, random.randint(0, 2) , gender, age, tenure, balance, products_number,
                 credit_card, active_member, estimated_salary]]
 
 # session_state 초기화
@@ -69,3 +73,4 @@ if st.session_state.pred_proba is not None:
     for i, pred in enumerate(st.session_state.pred_proba):
         st.write(f"예측 결과: {pred:.5f}")
 
+footer()
