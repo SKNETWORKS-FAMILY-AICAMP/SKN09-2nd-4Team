@@ -33,23 +33,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/YUJINDL01"><div align=center>@YUJINDL01</div></a></td>
-      <td><a href="https://github.com/syc9811"><div align=center>@syc9811</div></a></td>
-      <td><a href="https://github.com/SIQRIT"><div align=center>@SIQRIT</div></a></td>
-      <td><a href="https://github.com/devunis"><div align=center>@devunis</div></a></td>
-    </tr>
-  </tbody>
-</table>
-
-# 1. Project Introduction (프로젝트 개요)
-
-### 프로젝트 명
-
-**👑MVP👑**: 데이터 기반 ABC 은행 가입고객 이탈자 분석 및 예측 
-
-### 프로젝트 소개
-- 본 프로젝트는 머신러닝 및 데이터 분석 기법을 활용하여 ABC 은행 고객의 이탈 가능성을 예측하는 모델을 개발하는 것을 목표로 합니다. 이를 통해 ABC 은행은 고객 이탈을 사전에 감지하고, 
-맞춤형 마케팅 전략을 수립하여 고객 유지율을 높일 수 있을 것입니다.
+      됩니다.
 
 ### 프로젝트 배경
 
