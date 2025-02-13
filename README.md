@@ -129,7 +129,8 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 # 4. 데이터 전처리 결과서 (EDA)
 
 ### 데이터 수집 및 선정
-> https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset
+> ![image](https://github.com/user-attachments/assets/eeb3c472-010d-41ef-94ec-71f1626159ba)
+> 출처: https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset
 <br>
 
 ### 데이터 전처리 
