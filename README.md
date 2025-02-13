@@ -172,7 +172,18 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 >
 >
 >![Image](https://github.com/user-attachments/assets/50010858-bfdc-462e-adaf-91d9d99ef55c)
-
+>
+>
+>![Image](https://github.com/user-attachments/assets/800c94ce-3527-444b-83ef-a9796548e74d)
+>
+>![Image](https://github.com/user-attachments/assets/453e84ed-d593-43a3-82ff-45d20984d04d)
+>
+>![Image](https://github.com/user-attachments/assets/452e73bb-9e95-4cff-a2fa-536a8fc3a1b8)
+>
+>![Image](https://github.com/user-attachments/assets/7d11f50c-7e7a-42a5-bdb2-660dccc7dbce)
+>
+>
+>![Image](https://github.com/user-attachments/assets/9851172e-cd92-4835-8348-d3cfb9478a32)
 
 
 
