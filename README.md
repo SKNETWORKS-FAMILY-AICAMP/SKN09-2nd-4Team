@@ -75,7 +75,7 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 - 비용 절감: 고객 유지 비용 절감 및 신규 고객 유치 비용 최소화
 - 비즈니스 성장: 데이터 기반 의사결정을 통한 은행의 경쟁력 강화 및 고객 만족도 향상
 
-### 💲결론
+### 💲요약
 - 본 프로젝트를 통해 은행은 고객 이탈 문제를 보다 효과적으로 해결하고, 장기적인 고객 관계 관리를 강화할 수 있습니다.
 - 데이터 기반의 예측 모델을 활용하여 고객 맞춤형 전략을 수립함으로써 전통적인 은행의 지속 가능한 성장을 도모하는 것이 본 프로젝트의 최종 목표입니다.
 <br>
@@ -84,27 +84,20 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 
 # 2. 기술 스택
 
-###  협업 및 문서화  
-![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white)   
-
-###  도구  
-![VSCode](https://img.shields.io/badge/VScode-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white)
-
-###  형상 관리
+###  협업 및 형상 관리
+![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white) 
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)  
 
-###  프로그래밍 언어  
+
+###  개발 환경 & 언어 
+![VSCode](https://img.shields.io/badge/VScode-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white) 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white)  
 
-###  데이터 분석  
+###  데이터 분석 & 머신러닝
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=Pandas&logoColor=white) 
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=NumPy&logoColor=white)  
-
-###  머신러닝  
-![Scikit-Learn](https://img.shields.io/badge/Scikit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)  
-
-###  데이터 시각화  
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=NumPy&logoColor=white)   
+![Scikit-Learn](https://img.shields.io/badge/Scikit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)   
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=Matplotlib&logoColor=white) 
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C8CBF?style=for-the-badge&logo=Seaborn&logoColor=white)  
 
@@ -179,20 +172,20 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 > **2)컬럼별 고객 이탈률 및 고객 분포를 그래프로 시각화 및 확인**
 >
 >![Image](https://github.com/user-attachments/assets/800c94ce-3527-444b-83ef-a9796548e74d)
->독일의 고객 이탈율(32.44%)이 가장 높고, 프랑스(16.15%)와 스페인(16.67%)은 유사한 수준이지만 실제 고객 수는 프랑스가 가장 많은것으로 나타남
+>- 독일의 고객 이탈율(32.44%)이 가장 높고, 프랑스(16.15%)와 스페인(16.67%)은 유사한 수준이지만 실제 고객 수는 프랑스가 가장 많은것으로 나타남
 > 
 >![Image](https://github.com/user-attachments/assets/453e84ed-d593-43a3-82ff-45d20984d04d)
-> 신용등급에 따른 분류로는 각 이탈율이 비슷했지만 실제 분포를 확인해본 결과 실제 고객수는 신용등급이 중위권이 가장 많은것으로 나타남
+> - 신용등급에 따른 분류로는 각 이탈율이 비슷했지만 실제 분포를 확인해본 결과 실제 고객수는 신용등급이 중위권이 가장 많은것으로 나타남
 
 >![Image](https://github.com/user-attachments/assets/452e73bb-9e95-4cff-a2fa-536a8fc3a1b8)
->성별에 따른 분류로는 여성(25.07%)의 이탈률이 남성(16.46%)보다 높았지만 실제 고객 수를 확인해본 결과 남성의 고객수가 더 많은것으로 나타남
+>- 성별에 따른 분류로는 여성(25.07%)의 이탈률이 남성(16.46%)보다 높았지만 실제 고객 수를 확인해본 결과 남성의 고객수가 더 많은것으로 나타남
 
 >![Image](https://github.com/user-attachments/assets/7d11f50c-7e7a-42a5-bdb2-660dccc7dbce)
->가입 상품의 갯수에 따른 분류로는 4개이상 가입고객의 이탈율이(100%)로 전원이탈했지만 실제 고객수는 대부분이 1~2개의 상품에 가입한것으로 나타남
+>- 가입 상품의 갯수에 따른 분류로는 4개이상 가입고객의 이탈율이(100%)로 전원이탈했지만 실제 고객수는 대부분이 1~2개의 상품에 가입한것으로 나타남
 
 >
 >![Image](https://github.com/user-attachments/assets/9851172e-cd92-4835-8348-d3cfb9478a32)
->연령에 따른 분류로는 중년층(39.65%)의 이탈률이 가장 높으나 실제 고객수는 청년의 비율이 가장 높은것으로 나타남
+>- 연령에 따른 분류로는 중년층(39.65%)의 이탈률이 가장 높으나 실제 고객수는 청년의 비율이 가장 높은것으로 나타남
 >
 >
 >**3) 히트맵 시각화를 통한 컬럼별 상관관계 확인**
