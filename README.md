@@ -248,15 +248,36 @@
 
 
 <br>
+
 >- XGBoost (Base)
+>  
+> | XGBoost     | Precision | Recall | F1-Score | Accuracy | AUC   |
+> |-------------|----------|--------|----------|----------|-------|
+> | churn_1     | 0.6678   | 0.6318 | 0.6493   | 0.8610   | 0.8783  |
 
 >- RandomForest (Base)
+>
+> | RandomForest     | Precision | Recall | F1-Score | Accuracy | AUC   |
+> |-------------|----------|--------|----------|----------|-------|
+> | churn_1     | 0.8562   | 0.4092 | 0.5537   | 0.8657   | 0.8711  |
 
 >- AdaBoost (Base)
+>  
+> | AdaBoost     | Precision | Recall | F1-Score | Accuracy | AUC   |
+> |-------------|----------|--------|----------|----------|-------|
+> | churn_1     | 0.8385   | 0.3993 | 0.5410   | 0.8620   | 0.8655  |
 
 >- CatBoost (Base, Mete)
+>  
+> | CatBoost     | Precision | Recall | F1-Score | Accuracy | AUC   |
+> |-------------|----------|--------|----------|----------|-------|
+> | churn_1     | 0.6470   | 0.6414 | 0.6398   | 0.8370   | 0.8593  |
 
 >- Ensemble Model (Stacking)
+>  
+> | Ensemble Model     | Precision | Recall | F1-Score | Accuracy | AUC   |
+> |-------------|----------|--------|----------|----------|-------|
+> | churn_1     | 0.6482   | 0.6514 | 0.6498   | 0.8570   | 0.8793  |
 
 
 # 6. 수행결과
