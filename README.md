@@ -126,8 +126,6 @@ Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이�
 # 3. WBS
 <br>
 
-![readme](https://github.com/user-attachments/assets/a3af26b7-6336-40af-ac2a-9c0d3bb45e94)
-
 # 4. 데이터 전처리 결과서 (EDA)
 
 ### 데이터 수집 및 선정
