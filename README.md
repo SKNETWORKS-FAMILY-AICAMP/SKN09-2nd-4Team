@@ -51,78 +51,13 @@
 >- **👑MVP👑**: 데이터 기반 ABC 은행 가입고객 이탈자 분석 및 예측
 >
 >### 💲목표
->- 본 프로젝트는 데이터 분석 및 머신러닝을 활용하여 ABC 은행 고객의 이탈 가능성을 예측하는 모델을 개발하는 것입니다.
+>- 본 프로젝트는 데이터 분석 및 머신러닝을 활용하여 은행 고객의 이탈 가능성을 예측하는 모델을 개발하는 것입니다.
 >
 >### 💲프로젝트 배경
 >
 >![image](https://github.com/user-attachments/assets/cb482edb-53a0-40a9-a7d1-17ef4e1a8a18)
 >
->- 현대 금융 시장에서 고객 유지는 은행 및 금융 기관의 지속 가능한 성장을 위해 필수적인 요소입니다. 그러나, 현대의 전통적인 은행의 마케팅 비용은 증가한 반면, 고객이 이탈하는 상황에 직면했습니다. 또한 시중 은행에 대한 고객 충성도도 하락하는 경향을 보입니다.
-><br>
->
->![image](https://github.com/user-attachments/assets/3a3ecd71-6f16-42f6-b811-c7069a9588a7)
->
->- Harvard Business Review Reprint-"The Economics of E-Loyalty" (2002) by Frederick F. Reichheld & Phil Schefte-에 따르면, 기존 고객을 유지하는 비용은 신규 고객을 유치하는 비용보다 5배 저렴하다고 알려져 있습니다. 따라서, 기존 고객의 이탈을 방지하는 것이 운영 비용 절감 및 수익성 강화에 효과적인 전략이 될 수 있습니다.
-><br>
->
->  ![image](https://github.com/user-attachments/assets/fd4d2a7e-0580-43ca-9aed-375a82904b1f)
->
->- 하지만 Sage Journal-Reducing Adverse Selection through Customer Relationship Management
->Yong Cao and Thomas S. Gruca-에 따르면, 많은 금융 기관은 고객 이탈이 발생한 후에 대응하는 사후 관리 방식에 의존하고 있어 실질적인 비용 절감과 고객 유지 효과를 극대화하는 데 어려움을 겪고 있습니다. 이에 따라, 사전적으로 고객 이탈을 예측하고 선제적으로 대응할 수 있는 데이터 기반의 고객 이탈 예측 모델이 필요하게 되었습니다.
->
->### 💲기대 효과
->
->
->| 기대효과 |내용|
->|------|---|
->|고객이탈|이탈 가능성이 높은 고객을 조기에 발견하여 맞춤형 프로모션 및 상담 제공|
->|비용절감|고객 유지 비용 절감 및 신규 고객 유치 비용 최소화|
->|비즈니스 성장|데이터 기반 의사결정을 통한 은행의 경쟁력 강화 및 고객 만족도 향상|
->
->### 💲요약
->- 본 프로젝트를 통해 은행은 고객 이탈 문제를 보다 효과적으로 해결하고, 장기적인 고객 관계 관리를 강화할 수 있습니다.
->- 데이터 기반의 예측 모델을 활용하여 고객 맞춤형 전략을 수립함으로써 전통적인 은행의 지속 가능한 성장을 도모하는 것이 본 프로젝트의 최종 목표입니다.
-><br>
-><br>
-><br>
->
-># 2. 기술 스택
->
->###  협업 및 형상 관리
->![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white)
->![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white) 
->![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)  
->
->
->###  개발 환경 & 언어 
->![VSCode](https://img.shields.io/badge/VScode-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white) 
->![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white)  
->
->###  데이터 분석 & 머신러닝
->![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=Pandas&logoColor=white) 
->![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=NumPy&logoColor=white)   
->![Scikit-Learn](https://img.shields.io/badge/Scikit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)   
->![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=Matplotlib&logoColor=white) 
->![Seaborn](https://img.shields.io/badge/Seaborn-4C8CBF?style=for-the-badge&logo=Seaborn&logoColor=white)  
->
->### 🔗 대시보드  
->![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)  
-><br>
-><br>
-><br>
->
->----
->
-># 3. WBS
-><br>
->
->![readme](https://github.com/user-attachments/assets/2bf5ee49-d8a6-4d4b-b27d-1ed3f1459bd1)
->
-># 4. 데이터 전처리 결과서 (EDA)
->
->### 💲데이터 수집 및 선정
->![image](https://github.com/user-attachments/assets/eeb3c472-010d-41ef-94ec-71f1626159ba)
-> 출처: https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset
+>- 현대 금융 시장에서 고객 유지는 은행 및 금융 기관의 지속 가능한 성장을 위해 필수적인 요소입니다. 그러나, 현대의 전통적인 은행의 마케팅 비용은 증가한 반면, 고객이 이탈하는 상황에 직면했습니다. 또한 시중 은행에 대한 고객 충성도도함
 ><br>
 >
 >### 💲데이터 전처리 
