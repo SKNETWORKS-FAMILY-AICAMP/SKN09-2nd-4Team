@@ -26,6 +26,18 @@ header()
 # 사이드바 필터링 옵션
 st.sidebar.title("필터링")
 
+# 국가
+country_check = st.sidebar.segmented_control('국가', ['France', 'Spain', 'Germany'], selection_mode='multi')
+if country_check == []:  # 국가 값이 선택되었을 때만 변환
+    country_check = ['France', 'Spain', 'Germany']
+
+# 성별
+gender_check = st.sidebar.segmented_control('성별', ['남성', '여성'], selection_mode="multi")
+if gender_check:  # 성별 값이 선택되었을 때만 변환
+    gender_check = [gender_map[g] for g in gender_check]
+else:
+    gender_check = ['Male', 'Female']
+
 # 나이
 age_min = df['age'].min()
 age_max = df['age'].max()
@@ -36,17 +48,10 @@ credit_score_min = df['credit_score'].min()
 credit_score_max = df['credit_score'].max()
 credit_score_low, credit_score_high = st.sidebar.slider('신용점수', min_value=0, max_value=1000, value=(credit_score_min, credit_score_max), step=50)
 
-# 성별
-gender_check = st.sidebar.segmented_control('성별', ['남성', '여성'], selection_mode="multi")
-if gender_check:  # 성별 값이 선택되었을 때만 변환
-    gender_check = [gender_map[g] for g in gender_check]
-else:
-    gender_check = ['Male', 'Female']
-
 # 잔액
 balance_min = int(df['balance'].min())
 balance_max = int(df['balance'].max())
-balance_low, balance_high = st.sidebar.slider('잔액', min_value=0, max_value=1000000, value=(balance_min, balance_max), step=1000)
+balance_low, balance_high = st.sidebar.slider('잔액', min_value=0, max_value=300000, value=(balance_min, 200000), step=1000)
 
 # 상품 수
 products_number_min = df['products_number'].min()
@@ -58,22 +63,17 @@ tenure_min = df['tenure'].min()
 tenure_max = df['tenure'].max()
 tenure_low, tenure_high = st.sidebar.slider('가입 기간', min_value=0, max_value=50, value=(tenure_min, tenure_max))
 
+# 추정 급여
+estimated_salary_min = int(df['estimated_salary'].min())
+estimated_salary_max = int(df['estimated_salary'].max())
+estimated_salary_low, estimated_salary_high = st.sidebar.slider('추정 급여', min_value=0, max_value=200000, value=(estimated_salary_min, 200000), step=1000)
+
 # 활성 회원 여부
 active_member_check = st.sidebar.segmented_control('활성 회원 여부', ['활성', '비활성'], selection_mode='multi')
 if active_member_check:  # 활성 회원 값이 선택되었을 때만 변환
     active_member_check = [active_member_map[a] for a in active_member_check]
 else:
     active_member_check = [0, 1]
-
-# 국가
-country_check = st.sidebar.segmented_control('국가', ['France', 'Spain', 'Germany'], selection_mode='multi')
-if country_check == []:  # 국가 값이 선택되었을 때만 변환
-    country_check = ['France', 'Spain', 'Germany']
-
-# 추정 급여
-estimated_salary_min = int(df['estimated_salary'].min())
-estimated_salary_max = int(df['estimated_salary'].max())
-estimated_salary_low, estimated_salary_high = st.sidebar.slider('추정 급여', min_value=0, max_value=20000, value=(estimated_salary_min, estimated_salary_max), step=1000)
 
 # 신용카드 여부
 credit_card_check = st.sidebar.segmented_control('신용카드 여부', ['존재', '비존재'], selection_mode='multi')
