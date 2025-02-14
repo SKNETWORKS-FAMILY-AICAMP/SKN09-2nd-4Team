@@ -178,27 +178,27 @@
 
 >
 >![Image](https://github.com/user-attachments/assets/9851172e-cd92-4835-8348-d3cfb9478a32)
-> - 연령에 따른 분류로는 중년층(39.65%)의 이탈률이 가장 높으나 실제 고객수는 청년의 비율이 가장 높은것으로 나타남 <br>
+>✅연령에 따른 분류로는 중년층(39.65%)의 이탈률이 가장 높으나 실제 고객수는 청년의 비율이 가장 높은것으로 나타남 <br>
 >
 >
 >
->***4-3) 범주형 데이터 간의 관계 시각화**
+>**4-3) 범주형 데이터 간의 관계 시각화**
 >![Image](https://github.com/user-attachments/assets/649c2baa-eade-435b-8c96-241dfe2d4eb1)
 >
 >
 >![Image](https://github.com/user-attachments/assets/9ac4c885-33c2-4aef-9121-6c074298cc8e)
 >
->***4-4) 히트맵 시각화를 통한 컬럼별 상관관계 확인**
+>**4-4) 히트맵 시각화를 통한 컬럼별 상관관계 확인**
 >![Image](https://github.com/user-attachments/assets/28f5a9f3-7c29-40ff-ad42-420e85616bb5)
 >
 >✅양의 상관관계 중에서는 연령에 따른 이탈율이 가장 강했고, 음의 상관관계 중에서는 활동여부에 따른 이탈율이 가장 강했음
 >
->***4-5) 이탈여부에 따른 컬럼별 중요도확인**
+>**4-5) 이탈여부에 따른 컬럼별 중요도확인**
 >![Image](https://github.com/user-attachments/assets/3283f5f1-5ec9-4a4c-9ee9-16f357b34892)
 >
 >✅히트맵을 bar plot으로 도식화하여 상관관계를 비교하기 편하게 하였고 이를 통해 이탈여부에 따른 각 칼럼들이 다른 상관관계를 가져서 머신러닝에 적합하게 사용할 수 있겠다는 정보를 확인하였음
 >
->***4-6) 데이터 치우침확인 및 변환**
+>**4-6) 데이터 치우침확인 및 변환**
 >
 >![log transform](https://github.com/user-attachments/assets/ff9c18e7-4ca6-4cee-9bdd-a3e35e745ea4)
 >
