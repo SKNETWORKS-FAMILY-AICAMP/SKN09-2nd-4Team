@@ -225,6 +225,11 @@
 - ML 선택 이유: 본 데이터셋은 1만 개의 row와 12개의 column을 가진 적은 규모의 데이터셋임. 따라서 DL을 활용할 경우 overfitting의 가능성이 우려되어 ML을 선택하였음.
 - ML 모델 선택 이유: 해당 ABC 은행 데이터셋에 최적화된 ensemble 모델을 목표로 11개의 ML 모델 중 분류성능이 뛰어난 4개의 상위 모델을 선별하였음. 조합 방식은 stacking이 제일 적절하다고 판단함.
 - 학습된 인공지능 모델: XGBoost, RandomForest, CatBoost, AdaBoost -> Ensemble Model (Stacking)
+
+* 전체 사용 모델에 대한 성능 비교
+![whole_model_score_heatmap](https://github.com/user-attachments/assets/400dd0d5-86ee-4562-9209-938fea8ec1ac)
+
+
 <br>
 - XGBoost (Base)
 
