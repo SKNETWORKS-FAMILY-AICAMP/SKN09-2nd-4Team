@@ -125,8 +125,8 @@
 >|-------------------|----------------------------------------------------|------------------|
 >| customer_id       | 고객을 구별하는 고유 ID               | object      |
 >| credit_score      | 고객의 신용 점수                    | int64            |
->| country           | 고객이 거주하는 국가                | object           |
->| gender            | 고객의 성별                        | object           |
+>| country           | 고객이 거주하는 국가                | object (범주형)   |
+>| gender            | 고객의 성별                        | object (범주형)   |
 >| age               | 고객의 나이                        | int64            |
 >| tenure            | 고객의 은행 가입 기간             | int64            |
 >| balance           | 고객의 은행 잔액                  | float64          |
