@@ -174,8 +174,7 @@
 >**4)데이터 시각화**
 >
 >**1)컬럼별 이탈자에 대한 비율과 전체 비율을 그래프로 시각화 및 확인**
->![Image](https://github.com/user-attachments/assets/50010858-bfdc-462e-adaf-91d9d99ef55c)
->
+>![vis_all](https://github.com/user-attachments/assets/69eb32b7-ae56-4cbc-ab04-574378a694c5)
 > **2)컬럼별 고객 이탈률 및 고객 분포를 그래프로 시각화 및 확인**
 >
 >![Image](https://github.com/user-attachments/assets/800c94ce-3527-444b-83ef-a9796548e74d)
