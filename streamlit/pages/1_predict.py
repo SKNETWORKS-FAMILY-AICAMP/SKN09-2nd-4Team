@@ -44,13 +44,13 @@ with col3:
     gender = ['남성', '여성'].index(gender)
     credit_score = st.slider('신용점수', min_value=300, max_value=850, value=500)
     col31, col32 = st.columns(2)
-    with col31: 
-        active_member = st.checkbox('활성 회원 여부')
+    with col31:
+        active_member = st.segmented_control('활성 회원 여부', ['활성', '비활성'])
     with col32:
-        credit_card = st.checkbox('신용카드 여부')
+        credit_card = st.segmented_control('신용카드 여부', ['존재', '비존재'])
     
 input_data = [[credit_score, country, gender, age, tenure, balance, products_number,
-                credit_card, active_member, estimated_salary]]
+                credit_card == '존재', active_member == '활성', estimated_salary]]
 
 # session_state 초기화
 if "pred_proba" not in st.session_state:
@@ -69,6 +69,6 @@ with col3:
 # 예측 결과 표시
 if st.session_state.pred_proba is not None or st.session_state.pred_proba != 0.0:
     st.write('고객 이탈 예측 확률은 다음과 같습니다.')
-    st.write(f"예측 결과: {st.session_state.pred_proba:.4f}")
+    st.write(f"예측 결과: {st.session_state.pred_proba*100:.4f}%")
 
 footer()
