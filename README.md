@@ -136,7 +136,7 @@
 >| estimated_salary  | 고객의 추정 급여                   | float64          |
 >| churn             | 고객의 이탈 여부  | int64 (범주형)     |
 >
->✅변수 : credit_score (신용 점수), country (국가), age (나이), tenure (가입 기간),churn (이탈 여부)등의 변수 <br>
+>✅변수 : credit_score (신용 점수), country (국가), age (나이), tenure (가입 기간), churn (이탈 여부)등의 변수 <br>
 >✅데이터 크기 : 총 10000명의 고객 데이터, 12개의 변수 (2개의 object형 변수, 8개의 int형 변수, 2개의 float형 변수)
 >
 > **2) 결측치 확인**
