@@ -167,7 +167,7 @@
 >![Image](https://github.com/user-attachments/assets/dd1cd53f-0987-47e0-883c-1e69532c10c3)
 >
 >
->- 이상치 확인 결과, 이상치에서 이상값이 존재하는 경우 age, 상품수, 신용점수(age 뿐만아니라 다른 이상치 존재 컬럼들 기재 필요)이 었고, 각각 모두 존재 가능한 값이라 판단하고 이상치 처리를 하지 않았음 
+>- 이상치 확인 결과, 이상치에서 이상값이 존재하는 경우 age, 상품수, 신용점수 등의 컬럼이었으나, 각각 모두 존재 가능한 값이라 판단하고 이상치 처리를 하지 않았음 
 >>![Image](https://github.com/user-attachments/assets/1541befa-fc42-495f-b371-f326e126fa50)
 >- 컬럼 country와 gender를 라벨 인코딩 처리함
 >
