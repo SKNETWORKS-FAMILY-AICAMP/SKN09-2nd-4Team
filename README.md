@@ -166,7 +166,7 @@
 >![Image](https://github.com/user-attachments/assets/dd1cd53f-0987-47e0-883c-1e69532c10c3)
 >
 >
->- 이상치 확인 결과, age(나이) 컬럼에서 이상치가 발견되었지만, 검토한 결과 고령 고객들의 나이가 높은 것으로 확인되었음. 따라서 별도의 조치는 취하지 않았음.
+>- 이상치 확인 결과, 이상치에서 이상값이 존재하는 경우 age, 상품수, 신용점수(age 뿐만아니라 다른 이상치 존재 컬럼들 기재 필요)이 었고, 각각 모두 존재 가능한 값이라 판단하고 이상치 처리를 하지 않았음 
 >>![Image](https://github.com/user-attachments/assets/1541befa-fc42-495f-b371-f326e126fa50)
 >- 컬럼 country와 gender를 라벨 인코딩 처리함
 >
@@ -194,17 +194,26 @@
 >- 연령에 따른 분류로는 중년층(39.65%)의 이탈률이 가장 높으나 실제 고객수는 청년의 비율이 가장 높은것으로 나타남
 >
 >
->**3) 히트맵 시각화를 통한 컬럼별 상관관계 확인**
+>
+>**3) 범주형 데이터 간의 관계 시각화**
+>![Image](https://github.com/user-attachments/assets/649c2baa-eade-435b-8c96-241dfe2d4eb1)
+>
+>
+>![Image](https://github.com/user-attachments/assets/9ac4c885-33c2-4aef-9121-6c074298cc8e)
+>
+>**4) 히트맵 시각화를 통한 컬럼별 상관관계 확인**
 >![Image](https://github.com/user-attachments/assets/28f5a9f3-7c29-40ff-ad42-420e85616bb5)
 >
 >- 양의 상관관계 중에서는 연령에 따른 이탈율이 가장 강했고, 음의 상관관계 중에서는 활동여부에 따른 이탈율이 가장 강했음
 >
->**4) 이탈여부에 따른 컬럼별 중요도확인**
+>**5) 이탈여부에 따른 컬럼별 중요도확인**
 >![Image](https://github.com/user-attachments/assets/3283f5f1-5ec9-4a4c-9ee9-16f357b34892)
 >
->- 히트맵을 bar plot으로 도식화하여 상관관계를 비교하기 편하게 하였음
+>- 히트맵을 bar plot으로 도식화하여 상관관계를 비교하기 편하게 하였고 이를 통해 이탈여부에 따른 각 칼럼들이 다른 상관관계를 가져서 머신러닝에 적합하게 사용할 수 있겠다는 정보를 확인하였음
 >
->  **5) 데이터 왜도확인 및 변환**
+>  **6) 데이터 치우침확인 및 변환**
+>
+>
 >![Image](https://github.com/user-attachments/assets/4f2aa2ed-57e5-46e4-ba7e-4359016b394a)
 >
 >
@@ -216,18 +225,9 @@
 >
 >![Image](https://github.com/user-attachments/assets/4f8e096c-5d26-4f80-9b85-ec48bebf6801)
 >
->- 왜도를 확인한 결과 Age 컬럼의 왜도가 1이 넘는 것을 확인, Log 변환 처리과정을 거침
+>- 왜도를 확인한 결과 Age 컬럼의 왜도 값 1이 넘는 것을 확인함.치우침 문제를 정규 분포에 가깝게 만들기 위해 로그 변환(Log Transformation) 적용, Log 변환 처리과정을 거쳐 치우침을 개선
 >
->  **6) 추가분석과정**
->
->
->  6-1) 범주형 데이터 간의 관계 시각화
->![Image](https://github.com/user-attachments/assets/649c2baa-eade-435b-8c96-241dfe2d4eb1)
->
->
->![Image](https://github.com/user-attachments/assets/9ac4c885-33c2-4aef-9121-6c074298cc8e)
->
->**결론: 데이터셋의 비선형성 및 age 컬럼의 왜도가 1이 넘는 것을 확인하였으며, Age 컬럼의 왜도 보정을 위해 Log 변환을 수행함.**
+
 ----
 
 # 5. 인공지능 학습 결과서
