@@ -214,7 +214,7 @@
 <br>
 ✅ML 모델 선택 이유: 해당 ABC 은행 데이터셋에 최적화된 ensemble 모델을 목표로 11개의 ML 모델 중 **분류성능이 뛰어난 4개의 상위 모델을 선별**하였음. **조합 방식은 stacking**이 제일 적절하다고 판단함.
 <br>
-✅학습된 인공지능 모델: XGBoost, RandomForest, CatBoost, AdaBoost -> Ensemble Model (Stacking)
+✅학습된 인공지능 모델: RandomForest, XGBoost, AdaBoost, CatBoost -> Ensemble Model (Stacking)
 
 ✅전체 사용 모델에 대한 성능 비교
 ![whole_model_score_heatmap](https://github.com/user-attachments/assets/400dd0d5-86ee-4562-9209-938fea8ec1ac)
@@ -224,15 +224,6 @@
 
 > ![FEATURE](https://github.com/user-attachments/assets/af0fad72-c6e5-47bb-9435-558d2017fe46)
 
-✅XGBoost (Base)
->  
-> | XGBoost     | Precision | Recall | F1-Score | Accuracy | AUC   |
-> |-------------|----------|--------|----------|----------|-------|
-> | churn_1     | 0.6678   | 0.6318 | 0.6493   | 0.8610   | 0.8783  |
->
->![xgb](https://github.com/user-attachments/assets/a4520615-c2c6-4f8e-ab11-33e5c4497eb2)
-
-
 ✅RandomForest (Base)
 >
 > | RandomForest     | Precision | Recall | F1-Score | Accuracy | AUC   |
@@ -241,6 +232,13 @@
 >
 >![rf](https://github.com/user-attachments/assets/1e078a6d-f472-404a-91f4-4d6fc684ba75)
 
+✅XGBoost (Base)
+>  
+> | XGBoost     | Precision | Recall | F1-Score | Accuracy | AUC   |
+> |-------------|----------|--------|----------|----------|-------|
+> | churn_1     | 0.6678   | 0.6318 | 0.6493   | 0.8610   | 0.8783  |
+>
+>![xgb](https://github.com/user-attachments/assets/a4520615-c2c6-4f8e-ab11-33e5c4497eb2)
 
 ✅AdaBoost (Base)
 >  
