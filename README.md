@@ -5,7 +5,7 @@
 > 개발기간: 25.02.03 - 25.02.14
 <br>
 
-># 0. Team Introduction (팀 소개)
+# 0. 팀 소개
 >
 >### 💲팀명: MVP ("Million Vault Protector") 👑
 >
@@ -45,7 +45,7 @@
 ></table>
 ><br>
 >
-># 1. Project Introduction (프로젝트 개요)
+# 1. 프로젝트 개요
 >
 >### 💲프로젝트 명
 >- **👑MVP👑**: 데이터 기반 ABC 은행 가입고객 이탈자 분석 및 예측
@@ -87,7 +87,7 @@
 ><br>
 ><br>
 >
-># 2. 기술 스택
+# 2. 기술 스택
 >
 >###  협업 및 형상 관리
 >![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white)
@@ -114,12 +114,12 @@
 >
 >----
 >
-># 3. WBS
+# 3. WBS
 ><br>
 >
 >![readme](https://github.com/user-attachments/assets/2bf5ee49-d8a6-4d4b-b27d-1ed3f1459bd1)
 >
-># 4. 데이터 전처리 결과서 (EDA)
+# 4. 데이터 전처리 결과서 (EDA)
 >
 >### 💲데이터 수집 및 선정
 >![image](https://github.com/user-attachments/assets/eeb3c472-010d-41ef-94ec-71f1626159ba)
@@ -174,8 +174,7 @@
 >**4)데이터 시각화**
 >
 >**1)컬럼별 이탈자에 대한 비율과 전체 비율을 그래프로 시각화 및 확인**
->![Image](https://github.com/user-attachments/assets/50010858-bfdc-462e-adaf-91d9d99ef55c)
->
+>![vis_all](https://github.com/user-attachments/assets/69eb32b7-ae56-4cbc-ab04-574378a694c5)
 > **2)컬럼별 고객 이탈률 및 고객 분포를 그래프로 시각화 및 확인**
 >
 >![Image](https://github.com/user-attachments/assets/800c94ce-3527-444b-83ef-a9796548e74d)
@@ -214,17 +213,7 @@
 >
 >  **6) 데이터 치우침확인 및 변환**
 >
->
->![Image](https://github.com/user-attachments/assets/4f2aa2ed-57e5-46e4-ba7e-4359016b394a)
->
->
->![Image](https://github.com/user-attachments/assets/046ad368-bdde-41d3-8bc8-7d1c4345f9e1)
->
->
->![Image](https://github.com/user-attachments/assets/baceee0e-0bf1-4d1d-a90f-ff20d8b4c6b5)
->
->
->![Image](https://github.com/user-attachments/assets/4f8e096c-5d26-4f80-9b85-ec48bebf6801)
+>![log transform](https://github.com/user-attachments/assets/ff9c18e7-4ca6-4cee-9bdd-a3e35e745ea4)
 >
 >- 왜도를 확인한 결과 Age 컬럼의 왜도 값 1이 넘는 것을 확인함.치우침 문제를 정규 분포에 가깝게 만들기 위해 로그 변환(Log Transformation) 적용, Log 변환 처리과정을 거쳐 치우침을 개선
 >
@@ -232,28 +221,48 @@
 ----
 
 # 5. 인공지능 학습 결과서
-- 데이터셋 전처리 과정: 데이터셋 시각화에 따른 비선형 데이터셋 처리를 위해 log변환과 정규화 과정을 거침. 다만, 전체 데이터셋 중 target의 비율이 약 20%에 해당되어 over-sampling 처리는 하지 않음.
-- ML 선택 이유: 본 데이터셋은 1만 개의 row와 12개의 column을 가진 적은 규모의 데이터셋임. 따라서 DL을 활용할 경우 overfitting의 가능성이 우려되어 ML을 선택하였음.
-- ML 모델 선택 이유: 해당 ABC 은행 데이터셋에 최적화된 ensemble 모델을 목표로 11개의 ML 모델 중 분류성능이 뛰어난 4개의 상위 모델을 선별하였음. 조합 방식은 stacking이 제일 적절하다고 판단함.
-- 학습된 인공지능 모델: XGBoost, RandomForest, CatBoost, AdaBoost -> Ensemble Model (Stacking)
+>- 데이터셋 전처리 과정: 데이터셋 시각화에 따른 비선형 데이터셋 처리를 위해 log변환과 정규화 과정을 거침. 다만, 전체 데이터셋 중 target의 비율이 약 20%에 해당되어 over-sampling 처리는 하지 않음.
+>- ML 선택 이유: 본 데이터셋은 1만 개의 row와 12개의 column을 가진 적은 규모의 데이터셋임. 따라서 DL을 활용할 경우 overfitting의 가능성이 우려되어 ML을 선택하였음.
+>- ML 모델 선택 이유: 해당 ABC 은행 데이터셋에 최적화된 ensemble 모델을 목표로 11개의 ML 모델 중 분류성능이 뛰어난 4개의 상위 모델을 선별하였음. 조합 방식은 stacking이 제일 적절하다고 판단함.
+>- 학습된 인공지능 모델: XGBoost, RandomForest, CatBoost, AdaBoost -> Ensemble Model (Stacking)
+
+>* 전체 사용 모델에 대한 성능 비교
+![whole_model_score_heatmap](https://github.com/user-attachments/assets/400dd0d5-86ee-4562-9209-938fea8ec1ac)
+
+
 <br>
-- XGBoost (Base)
+>- XGBoost (Base)
 
-- RandomForest (Base)
+>- RandomForest (Base)
 
-- AdaBoost (Base)
+>- AdaBoost (Base)
 
-- CatBoost (Base, Mete)
+>- CatBoost (Base, Mete)
 
-- Ensemble Model (Stacking)
+>- Ensemble Model (Stacking)
 
 
-# 6. 수행결과 (테스트 결과 화면 또는 시연 페이지)
+# 6. 수행결과
+- 메인 페이지
+<img width="1679" alt="스크린샷 2025-02-14 오후 12 42 20" src="https://github.com/user-attachments/assets/493de67d-4371-4937-8539-893e9a65f4b5" />
+
+- 예측 페이지
+<img width="1679" alt="스크린샷 2025-02-14 오후 12 42 33" src="https://github.com/user-attachments/assets/bfdc530d-471f-466c-8e5d-6efacb814cc5" />
+
+- 분석 페이지
+<img width="1680" alt="스크린샷 2025-02-14 오후 12 42 53" src="https://github.com/user-attachments/assets/5dfa8755-970e-4503-bb84-1778e5d5ffb6" />
+
+- 분석 페이지 필터링 적용 1
+<img width="1680" alt="스크린샷 2025-02-14 오후 12 43 10" src="https://github.com/user-attachments/assets/15b11971-acd0-4377-9113-82b6210f7e80" />
+
+- 분석 페이지 필터링 적용 2
+<img width="1680" alt="스크린샷 2025-02-14 오후 12 43 25" src="https://github.com/user-attachments/assets/b74f3041-af73-40f5-bec0-c4a94a39e543" />
+
 <br>
 
 # 7. 한 줄 회고
-- 박유진: Logistic regression, KNN 모델의 성능을 개선하기 위해 직접 grid search, log 변환, optuna 등을 적용해보면서 전처리의 중요성과 각 모델의 하이퍼파라미터에 대해 더 잘 이해할 수 있었다.  
-- 서예찬: 이번 프로젝트를 하면서 EDA,ML과정에서 부족한 부분을 팀원들에게 많이 배웠고, 특히 ML과정에서 예전에는 써보지않았던 optuna 등을 적용하며 하이퍼파라미터 조정등을 통해 머신의 성능을 높이는 과정에 대해 이해도가 높아진것같다.
-- 조이현: EDA 과정에서 범주형 데이터 컬럼별 데이터에 대한 상관계수 편차가 큰 것을 확인했다. 따라서, 각각의 최적화된 머신러닝을 튜닝하는 것까지 시도해보고 싶었지만, 앙상블 모델의 스태킹에 있어서 예외적인 설계를 새로이 발견하여 전체 데이터셋에 적용하는 시행착오를 겪으면서 시간적 여건이 되지 않아 아쉬울 따름이다.
-- 허정윤: 앙상블 모델을 보팅이나 스태킹으로 또 앙상블을 시키는 작업이 가능하단 걸 깨달았다. 예측 목적에 따라서 각 평가 지표들의 중요성이 달라진다는걸 깨달았다. 특히 고객 이탈의 경우 재현율이 중요하지만 정밀도가 너무 낮아지면 기존 고객을 잃을 수 있다.
+>- 박유진: Logistic regression, KNN 모델의 성능을 개선하기 위해 직접 grid search, log 변환, optuna 등을 적용해보면서 전처리의 중요성과 각 모델의 하이퍼파라미터에 대해 더 잘 이해할 수 있었다.  
+>- 서예찬: 이번 프로젝트를 하면서 EDA,ML과정에서 부족한 부분을 팀원들에게 많이 배웠고, 특히 ML과정에서 예전에는 써보지않았던 optuna 등을 적용하며 하이퍼파라미터 조정등을 통해 머신의 성능을 높이는 과정에 대해 이해도가 높아진것같다.
+>- 조이현: EDA 과정에서 범주형 데이터 컬럼별 데이터에 대한 상관계수 편차가 큰 것을 확인했다. 따라서, 각각의 최적화된 머신러닝을 튜닝하는 것까지 시도해보고 싶었지만, 앙상블 모델의 스태킹에 있어서 예외적인 설계를 새로이 발견하여 전체 데이터셋에 적용하는 시행착오를 겪으면서 시간적 여건이 되지 않아 아쉬울 따름이다.
+>- 허정윤: 앙상블 모델을 보팅이나 스태킹으로 또 앙상블을 시키는 작업이 가능하단 걸 깨달았다. 예측 목적에 따라서 각 평가 지표들의 중요성이 달라진다는걸 깨달았다. 특히 고객 이탈의 경우 재현율이 중요하지만 정밀도가 너무 낮아지면 기존 고객을 잃을 수 있다.
 <br>
