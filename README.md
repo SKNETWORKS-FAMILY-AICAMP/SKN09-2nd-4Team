@@ -214,17 +214,7 @@
 >
 >  **6) 데이터 치우침확인 및 변환**
 >
->
->![Image](https://github.com/user-attachments/assets/4f2aa2ed-57e5-46e4-ba7e-4359016b394a)
->
->
->![Image](https://github.com/user-attachments/assets/046ad368-bdde-41d3-8bc8-7d1c4345f9e1)
->
->
->![Image](https://github.com/user-attachments/assets/baceee0e-0bf1-4d1d-a90f-ff20d8b4c6b5)
->
->
->![Image](https://github.com/user-attachments/assets/4f8e096c-5d26-4f80-9b85-ec48bebf6801)
+>![log transform](https://github.com/user-attachments/assets/ff9c18e7-4ca6-4cee-9bdd-a3e35e745ea4)
 >
 >- 왜도를 확인한 결과 Age 컬럼의 왜도 값 1이 넘는 것을 확인함.치우침 문제를 정규 분포에 가깝게 만들기 위해 로그 변환(Log Transformation) 적용, Log 변환 처리과정을 거쳐 치우침을 개선
 >
