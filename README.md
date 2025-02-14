@@ -202,7 +202,7 @@
 >
 >![log transform](https://github.com/user-attachments/assets/ff9c18e7-4ca6-4cee-9bdd-a3e35e745ea4)
 >
->✅왜도를 확인한 결과 Age 컬럼의 왜도 값 1이 넘는 것을 확인함.치우침 문제를 정규 분포에 가깝게 만들기 위해 로그 변환(Log Transformation) 적용, Log 변환 처리과정을 거쳐 치우침을 개선
+>✅왜도를 확인한 결과 Age 컬럼의 왜도 값 1이 넘는 것을 확인함. 데이터 불균형(치우침) 문제를 정규 분포에 가깝게 만들기 위해 로그 변환(Log Transformation) 적용, Log 변환 처리과정을 거쳐 치우침을 개선
 <br>
 
 ----
