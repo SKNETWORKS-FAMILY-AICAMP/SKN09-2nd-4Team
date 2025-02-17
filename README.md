@@ -220,7 +220,7 @@
 ![whole_model_score_heatmap](https://github.com/user-attachments/assets/400dd0d5-86ee-4562-9209-938fea8ec1ac)
 
 <br>
-✅Feature Impotance <br>
+✅Feature Importance <br>
 
 > ![FEATURE](https://github.com/user-attachments/assets/af0fad72-c6e5-47bb-9435-558d2017fe46)
 
